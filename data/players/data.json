@@ -1,0 +1,16 @@
+{
+    "players": [
+        {
+            "Bob": {
+                "score": 10,
+                "password": "abc"
+            }
+        },
+        {
+            "Magda": {
+                "password": "123",
+                "score": 0
+            }
+        }
+    ]
+}
