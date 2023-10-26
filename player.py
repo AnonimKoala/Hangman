@@ -18,8 +18,8 @@ class Player:
             Player.playersArr.append(p)
 
     def login():
-        name = str(input("Podaj nazwe gracza: "))
-        password = str(input("Podaj haslo: "))
+        name = str(input("Podaj login: "))
+        password = str(input("Podaj hasło: "))
 
         obj= None
         for el in Player.playersArr:
@@ -38,7 +38,7 @@ class Player:
                     "name": name,
                     "score": int(gotScore)
                 })
-                print("Witaj ",name)
+                print("\x1B[3m" + f"- Witaj {name}! -" + "\x1B[0m\n")
 
                 together = str(input("Czy kolejny gracz chce dołaczyć? T/N: "))
                 if together.upper() == 'T':
@@ -61,8 +61,8 @@ class Player:
             })
         
     def save():
-        print(Player.LOGGED)
-        print(Player.playersArr)
+        # print(Player.LOGGED)
+        # print(Player.playersArr)
 
         for log in Player.LOGGED:
             for arrEl in Player.playersArr:

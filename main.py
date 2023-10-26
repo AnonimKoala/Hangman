@@ -5,13 +5,8 @@ import game
 import re
 
 
-
-
 game.start()
 
 game.game()
 
-# print(Player.LOGGED)
-# print(Player.playersArr)
-
-# game.save()
+game.save()

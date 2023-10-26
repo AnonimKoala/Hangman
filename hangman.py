@@ -27,12 +27,15 @@ class Hangman:
         self.hashed = re.sub(r'[a-zA-Z]', r'_', self.word)
         self.length = len(self.word)
 
+        self.guessedLetter_Arr = []
+
     def checkLetter(self, letter):
         response = find(self.word, letter)
         if response:
             for i in response:
                 if self.word[i] == letter:
                     self.hashed = self.hashed[:i] + letter + self.hashed[i+1:]
+                    self.guessedLetter_Arr.append(letter)
             return len(response)
         else:
             return False
